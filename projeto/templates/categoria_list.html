@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Lista de Categorias{% endblock %}
+{% block content %}
+<h2>Lista de Categorias</h2>
+<ul>
+    {% for categoria in object_list %}
+    <li>{{ categoria.nome }} - <a href="{% url 'categoria_update' categoria.pk %}">Editar</a> - <a href="{% url 'categoria_delete' categoria.pk %}">Excluir</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'categoria_create' %}">Nova Categoria</a>
+{% endblock %}

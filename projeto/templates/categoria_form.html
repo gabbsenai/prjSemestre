@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Formulário de Categoria{% endblock %}
+
+{% block content %}
+    <h2>{% if object %}Editar Categoria{% else %}Nova Categoria{% endif %}</h2>
+   
+    <form method="post" class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+   
+    <a href="{% url 'categoria_list' %}" class="btn btn-secondary mt-3">Voltar para a lista de categorias</a>
+{% endblock %}

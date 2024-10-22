@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Excluir Produto{% endblock %}
+
+{% block content %}
+    <h2>Excluir Produto</h2>
+
+    <p>Tem certeza de que deseja excluir o produto <strong>{{ object.nome }}</strong>?</p>
+   
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirmar Exclusão</button>
+        <a href="{% url 'produto_list' %}">Cancelar</a>
+    </form>
+{% endblock %}
