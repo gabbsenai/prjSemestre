@@ -11,6 +11,7 @@
                 <th>Nome</th>
                 <th>Preço</th>
                 <th>Categoria</th>
+                <th>Estado</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -18,11 +19,12 @@
             {% for produto in object_list %}
             <tr>
                 <td>{{ produto.nome }}</td>
-                <td>R$ {{ produto.preco }}</td>
+                <td>R$ {{ produto.valor }}</td>
                 <td>{{ produto.categoria.nome }}</td>
+                <td>{{ produto.estado}}</td>
                 <td>
-                    <a href="{% url 'produto_update' produto.pk %}" class="btn btn-sm btn-warning">Editar</a>
-                    <a href="{% url 'produto_delete' produto.pk %}" class="btn btn-sm btn-danger">Excluir</a>
+                    <a href="{% url 'produto_update' produto.pk %}" class="btna">Editar</a>
+                    <a href="{% url 'produto_delete' produto.pk %}" class="btnv">Excluir</a>
                 </td>
             </tr>
             {% empty %}
@@ -33,7 +35,6 @@
         </tbody>
     </table>
 
-    <a href="{% url 'produto_create' %}">Novo Produto</a>
-    <br>
-    <a href="{% url 'categoria_create' %}">Cadastrar Categoria</a>
+    <a class="btn" href="{% url 'produto_create' %}">Novo Produto</a>
+    <a class="btn" href="{% url 'categoria_create' %}">Cadastrar Categoria</a>
 {% endblock %}

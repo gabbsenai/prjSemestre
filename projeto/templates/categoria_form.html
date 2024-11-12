@@ -8,8 +8,8 @@
     <form method="post" class="form-group">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="submit" class="btn">Salvar</button>
     </form>
    
-    <a href="{% url 'categoria_list' %}" class="btn btn-secondary mt-3">Voltar para a lista de categorias</a>
+    <a href="{% url 'categoria_list' %}" class="btn">Voltar para a lista de categorias</a>
 {% endblock %}

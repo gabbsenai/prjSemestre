@@ -13,7 +13,6 @@ class Produto(models.Model):
     descricao = models.TextField(max_length=300)
     valor = models.FloatField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    data = models.DateField(auto_now=True)
     ativo = models.BooleanField(default=True)
     estado = models.CharField(max_length=1, choices=[('N', 'Novo'), ('U', 'Usado')])
     imagem = models.ImageField(upload_to='produto/', null=True, blank=True)

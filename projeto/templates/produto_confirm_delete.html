@@ -9,7 +9,7 @@
    
     <form method="post">
         {% csrf_token %}
-        <button type="submit">Confirmar Exclusão</button>
-        <a href="{% url 'produto_list' %}">Cancelar</a>
+        <button type="submit" class="btnv">Confirmar Exclusão</button>
+        <a class="btn" href="{% url 'produto_list' %}">Cancelar</a>
     </form>
 {% endblock %}

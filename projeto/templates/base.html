@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Projeto Modelo{% endblock %}</title> {% load static%}
+    <title>{% block title %}Projeto Semestre{% endblock %}</title> {% load static%}
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
 </head>
 <body>
+    <header>
+        <img class="logo" src="{% static 'img/logo.png' %}" alt="">
+        <div class="btnacesso">
+            <a class="btn" href="{% url 'produto_list'%}">Produtos</a>
+            <a class="btn" href="{% url 'categoria_list'%}">Categoria</a>
+            <a class="btn" href="{% url 'movimentacao_list'%}">Movimentação</a>
+        </div>
+    </header>
+    <div class="container">
     {% block content %} {% endblock %}
+    </div>
+    <footer></footer>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Listar Movimentação{% endblock %}
+
+{% block content %}
+<h2>Confirmar Exclusão</h2>
+<p>Você tem certeza que deseja excluir a movimentação de {{ object.produto.nome }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btnv">Confirmar</button>
+    <a href="{% url 'movimentacao_list' %}" class="btn">Cancelar</a>
+</form>
+{% endblock %}

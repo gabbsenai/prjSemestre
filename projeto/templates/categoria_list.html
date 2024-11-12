@@ -4,8 +4,8 @@
 <h2>Lista de Categorias</h2>
 <ul>
     {% for categoria in object_list %}
-    <li>{{ categoria.nome }} - <a href="{% url 'categoria_update' categoria.pk %}">Editar</a> - <a href="{% url 'categoria_delete' categoria.pk %}">Excluir</a></li>
+    <li>{{ categoria.nome }} - <a class="btna" href="{% url 'categoria_update' categoria.pk %}">Editar</a> - <a class="btnv" href="{% url 'categoria_delete' categoria.pk %}">Excluir</a></li>
     {% endfor %}
 </ul>
-<a href="{% url 'categoria_create' %}">Nova Categoria</a>
+<a class="btn" href="{% url 'categoria_create' %}">Nova Categoria</a>
 {% endblock %}
