@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Perfil{% endblock %}
+{% block content %}
+
+
+<div class="table-container">
+    <h1>Bem-vindo {{ user.first_name }} {{ user.last_name }}!</h1>
+    <h2>Últimos 10 Produtos e Saldo de Estoque</h2>
+<table>
+    <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+        <th>Saldo em Estoque</th>
+    </tr>
+    {% for produto in produtos %}
+    <tr>
+        <td>{{ produto.nome }}</td>
+        <td>R$ {{ produto.valor }}</td>
+        <td>{{ produto.saldo|default:"0" }} unidades</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -9,4 +9,4 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('perfil/', ProfileView.as_view(), name='profile'),
     path('editarperfil/', EditProfileView.as_view(), name='edit_profile'),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

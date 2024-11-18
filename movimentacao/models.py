@@ -12,7 +12,7 @@ class Movimentacao(models.Model):
     valor_total = models.DecimalField(max_digits=10, decimal_places=2, editable=False)
 
     def save(self, *args, **kwargs):
-        self.valor_total = self.quantidade * self.produto.preco
+        self.valor_total = self.quantidade * self.produto.valor
         super().save(*args, **kwargs)
 
     def __str__(self):

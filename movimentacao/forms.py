@@ -1,6 +1,5 @@
 from movimentacao.models import Movimentacao
-from projeto import forms
-
+from django import forms
 
 class MovimentacaoForm(forms.ModelForm):
     class Meta:

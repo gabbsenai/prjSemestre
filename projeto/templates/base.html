@@ -8,15 +8,16 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="{% static 'img/logo.png' %}" alt="">
+        <img class="logo" src="{% static 'img/logo (1).png' %}" alt="">
         <div class="btnacesso">
+            <a class="btn" href="{% url 'homepage'%}">Home</a>
             <a class="btn" href="{% url 'produto_list'%}">Produtos</a>
             <a class="btn" href="{% url 'categoria_list'%}">Categoria</a>
             <a class="btn" href="{% url 'movimentacao_list'%}">Movimentação</a>
             <a class="btn" href="{% url 'profile' %}">Perfil</a>
-            <form action="{% url "logout" %}" method="post" style="display:incline;">
+            <form action="{% url "logout" %}" method="post">
                 {% csrf_token %}
-                <button type="submit" class="btn" style="background: none; border: none; color: white;cursor: pointer; font-size: 1.3rem;">Sair</button>
+                <button type="submit" class="btnv">Sair</button>
             </form>
         </div>
     </header>

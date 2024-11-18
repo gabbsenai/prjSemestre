@@ -2,23 +2,29 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">{% load static%}
+    <link rel="stylesheet" href="{% static 'css/estiloLogin.css' %}">
+    <title>Login do usuário</title>
 </head>
 <body>
+<div class="lateral">
+    <img class="l" src="{% static 'img/Logo (1).png' %}" alt="Imagem da pag de login">
+</div>
+<div class="container">
+    <div class="borda">
     <h2>Login</h2>
     <form method="post" action="{% url 'login' %}">
             
         {% csrf_token%}
         {{ form.as_p }}
-        <button type="submit">Entrar</button>
+        <button type="submit" class="btn">Entrar</button>
         
     </form>
 
     {% if form.erros %}
-        <p>Usuaário e senha inválidos"</p>
+        <p>Usuário e senha inválidos"</p>
     {% endif %}
-
+    </div>
+</div>
 </body>
 </html>

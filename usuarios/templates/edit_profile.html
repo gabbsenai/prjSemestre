@@ -10,8 +10,8 @@ edit_profile.html
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}  <!-- Exibe o formulário -->
-    <button type="submit">Salvar Alterações</button>
+    <button type="submit" class="btn">Salvar Alterações</button>
 </form>
 
-<a href="{% url 'produto_list' %}">Voltar para a página inicial</a>
+<a href="{% url 'produto_list' %}" class="btn">Voltar para a página inicial</a>
 {% endblock %}

@@ -4,9 +4,9 @@
 <h1>Bem-vindo, {{ user.first_name }} {{ user.last_name }}!</h1>
     <p>E-mail: {{ user.email }}</p>
    
-    <a href="{% url 'edit_profile' %}">Editar Perfil</a>
+    <a href="{% url 'edit_profile' %}" class="btna">Editar Perfil</a>
     <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}
-        <button type="submit">Logout</button>
+        <button type="submit" class="btnv">Logout</button>
     </form>
 {% endblock %}
