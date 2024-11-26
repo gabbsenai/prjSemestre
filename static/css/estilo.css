@@ -84,8 +84,7 @@ form>p{
     justify-content: center;
 }
 .logo{
-    width: 20vw;
-    height: 10vh;
+    height: 80px;
 }
 .btnacesso{
     display: flex;
@@ -144,7 +143,7 @@ form>p{
         flex-direction: column;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
     .btnacesso {
         flex-direction: column; /* Empilha os botões */
         width: 100%; /* Largura completa */

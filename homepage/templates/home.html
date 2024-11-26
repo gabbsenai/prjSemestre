@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<div class="table-container">
+<div class="tablecontainer">
     <h1>Bem-vindo {{ user.first_name }} {{ user.last_name }}!</h1>
     <h2>Últimos 10 Produtos e Saldo de Estoque</h2>
 <table>
@@ -18,13 +18,17 @@
         <td>{{ produto.nome }}</td>
         <td>R$ {{ produto.valor }}</td>
         <td>{{ produto.saldo|default:"0" }} unidades</td>
-        {% if produto.imagem.url is not None %}
-
-        {% else%}
-
-        {% endif %}
+        <td>
+            {% if produto.imagem %}
+                <a href="{{ produto.imagem.url }}" target="_blank" class="btn">Visualizar</a>
+            {% else %}
+                <span>Sem imagem</span>
+            {% endif %}
+        </td>
+        
     </tr>
     {% endfor %}
 </table>
 </div>
+
 {% endblock %}
