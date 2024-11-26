@@ -11,12 +11,18 @@
         <th>Produto</th>
         <th>Preço</th>
         <th>Saldo em Estoque</th>
+        <th>Imagem</th>
     </tr>
     {% for produto in produtos %}
     <tr>
         <td>{{ produto.nome }}</td>
         <td>R$ {{ produto.valor }}</td>
         <td>{{ produto.saldo|default:"0" }} unidades</td>
+        {% if produto.imagem.url is not None %}
+
+        {% else%}
+
+        {% endif %}
     </tr>
     {% endfor %}
 </table>

@@ -150,6 +150,14 @@ form>p{
         height: auto; /* Proporcional */
         margin-bottom: 2vh; /* Espaçamento abaixo da logo */
     }
+    table {
+        margin-bottom: 2vh; /* Adiciona espaço abaixo de cada tabela */
+    }
+
+    tr {
+        flex-direction: column; /* Empilha as células na responsividade */
+        gap: 1vh; /* Espaçamento entre linhas dentro da tabela */
+    }
 }
 
 @media screen and (max-width: 480px) {
