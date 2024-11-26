@@ -20,12 +20,12 @@
         <td>{{ produto.saldo|default:"0" }} unidades</td>
         <td>
             {% if produto.imagem %}
-                <a href="{{ produto.imagem.url }}" target="_blank" class="btn">Visualizar</a>
+                <a href="{{ produto.imagem.url }}" target="_blank" class="btn">Ver</a>
             {% else %}
                 <span>Sem imagem</span>
             {% endif %}
         </td>
-        
+
     </tr>
     {% endfor %}
 </table>

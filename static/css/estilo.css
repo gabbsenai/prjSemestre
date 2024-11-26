@@ -1,8 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
-header, footer{
+    box-sizing: border-box;
+}
+
+header, footer {
     width: 100vw;
     height: 10vh;
     background-color: rgb(70, 71, 72);
@@ -10,7 +12,8 @@ header, footer{
     gap: 10vw;
     justify-content: space-evenly;
 }
-.container{
+
+.container {
     width: 100vw;
     padding-top: 10vh;
     min-height: 80vh;
@@ -20,10 +23,12 @@ header, footer{
     align-items: center;
     gap: 5vh;
 }
-table, thead, tbody{
+
+table, thead, tbody {
     width: 80%;
 }
-tr{
+
+tr {
     border-bottom: 2px solid rgb(0, 0, 0);
     min-height: 6vh;
     width: 100%;
@@ -31,13 +36,15 @@ tr{
     align-items: center;
     justify-content: space-between;
 }
-td, th{
+
+td, th {
     min-width: 15vw;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.btn{
+
+.btn {
     text-decoration: none;
     background-color: rgba(70, 71, 72, 0.7);
     color: aliceblue;
@@ -45,7 +52,8 @@ td, th{
     margin: 2px;
     border-radius: 5px;
 }
-.btn:hover{
+
+.btn:hover {
     text-decoration: none;
     background-color: rgb(70, 71, 72);
     color: aliceblue;
@@ -54,7 +62,8 @@ td, th{
     border-radius: 5px;
     border: 2px solid rgb(211, 210, 210);
 }
-.btnv{
+
+.btnv {
     text-decoration: none;
     background-color: rgba(210, 0, 0, 0.5);
     color: aliceblue;
@@ -62,7 +71,8 @@ td, th{
     margin: 2px;
     border-radius: 5px;
 }
-.btnv:hover{
+
+.btnv:hover {
     text-decoration: none;
     background-color: rgb(210, 0, 0);
     color: aliceblue;
@@ -71,28 +81,33 @@ td, th{
     border-radius: 5px;
     border: 2px solid white;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1vh;
 }
-form>p{
+
+form > p {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.logo{
-    height: 80px;
+
+.logo {
+    height: 55px;
 }
-.btnacesso{
+
+.btnacesso {
     display: flex;
     height: 100%;
     align-items: center;
     width: 30%;
 }
-.btna{
+
+.btna {
     text-decoration: none;
     background-color: rgba(38, 50, 143, 0.7);
     color: aliceblue;
@@ -100,7 +115,8 @@ form>p{
     margin: 2px;
     border-radius: 5px;
 }
-.btna:hover{
+
+.btna:hover {
     text-decoration: none;
     background-color: rgb(33, 51, 186);
     color: aliceblue;
@@ -109,62 +125,95 @@ form>p{
     border-radius: 5px;
     border: 2px solid rgb(211, 210, 210);
 }
+
 @media screen and (max-width: 700px) {
-    header, footer {
-        justify-content: center; /* Centraliza verticalmente */
-        align-items: center; /* Centraliza horizontalmente */
-        flex-direction: column; /* Empilhar os itens */
-        height: auto; /* Altura ajustada */
-        gap: 2vh; /* Menor espaçamento */
+    body {
+        font-size: 0.9rem; /* Fonte padrão menor */
     }
 
+    header, footer {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        gap: 2vh;
+        font-size: 0.8rem; /* Fonte menor no cabeçalho e rodapé */
+    }
+    td{
+        min-width: none;
+        max-width: 3vw;
+        overflow: hidden;
+    }
+    .btnacao{
+        display: flex;
+        flex-direction: column;
+    }
     .container {
-        gap: 3vh; /* Reduz o espaçamento vertical */
+        gap: 3vh;
         padding-top: 5vh;
     }
 
     table, thead, tbody {
-        width: 95%; /* Reduz a largura da tabela */
+        width: 95%;
+        font-size: 0.75rem; /* Fonte menor na tabela */
     }
+
+    h1, h2 {
+        font-size: 1.2rem; /* Títulos menores */
+    }
+
     .btn, .btnv, .btna {
-        padding: 5px 10px; /* Botões maiores para facilitar o toque */
+        padding: 5px 10px;
         margin: 5px 0;
-        font-size: 1rem; /* Texto maior */
+        font-size: 0.85rem; /* Fonte reduzida dos botões */
     }
 
     .logo {
-        width: 40vw; /* Reduz o tamanho da logo */
-        height: auto; /* Proporcional */
-        margin-bottom: 2vh; /* Espaçamento abaixo da logo */
+        width: 40vw;
+        height: auto;
+        margin-bottom: 2vh;
     }
+
     .table-container {
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 900px) {
+    body {
+        font-size: 0.95rem; /* Fonte intermediária */
+    }
+
+    header, footer {
+        font-size: 0.9rem; /* Fonte intermediária no cabeçalho e rodapé */
+    }
+
     .btnacesso {
-        flex-direction: column; /* Empilha os botões */
-        width: 100%; /* Largura completa */
+        flex-direction: column;
+        width: 100%;
     }
 
     .container {
-        gap: 2vh; /* Reduz ainda mais o espaçamento */
+        gap: 2vh;
         padding-top: 5vh;
     }
 
     table, thead, tbody {
-        width: 100%; /* Largura máxima */
+        width: 100%;
+        font-size: 0.8rem; /* Fonte intermediária na tabela */
     }
 
     form {
-        width: 90%; /* Ajusta o formulário */
+        width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem; /* Títulos intermediários */
     }
 
     .btn, .btnv, .btna {
-        font-size: 0.9rem; /* Texto menor */
+        font-size: 0.9rem; /* Fonte intermediária nos botões */
     }
-    
-}
 }
