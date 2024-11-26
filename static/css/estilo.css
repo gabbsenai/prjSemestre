@@ -127,18 +127,6 @@ form>p{
     table, thead, tbody {
         width: 95%; /* Reduz a largura da tabela */
     }
-
-    tr {
-        flex-direction: column; /* Empilha as células */
-        align-items: flex-start; /* Alinha à esquerda */
-        border-bottom: 1px solid rgb(0, 0, 0); /* Reduz a borda */
-    }
-
-    td, th {
-        width: 100%; /* Largura total */
-        min-width: unset; /* Remove a largura mínima */
-    }
-
     .btn, .btnv, .btna {
         padding: 5px 10px; /* Botões maiores para facilitar o toque */
         margin: 5px 0;
@@ -150,14 +138,9 @@ form>p{
         height: auto; /* Proporcional */
         margin-bottom: 2vh; /* Espaçamento abaixo da logo */
     }
-    table {
-        margin-bottom: 2vh; /* Adiciona espaço abaixo de cada tabela */
-    }
-
-    tr {
-        flex-direction: column; /* Empilha as células na responsividade */
-        gap: 1vh; /* Espaçamento entre linhas dentro da tabela */
-    }
+    .table-container {
+        display: flex;
+        align-items: center;
 }
 
 @media screen and (max-width: 480px) {
@@ -182,4 +165,6 @@ form>p{
     .btn, .btnv, .btna {
         font-size: 0.9rem; /* Texto menor */
     }
+    
+}
 }
