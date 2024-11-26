@@ -110,7 +110,7 @@ form>p{
     border-radius: 5px;
     border: 2px solid rgb(211, 210, 210);
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
     header, footer {
         justify-content: center; /* Centraliza verticalmente */
         align-items: center; /* Centraliza horizontalmente */
@@ -141,6 +141,7 @@ form>p{
     .table-container {
         display: flex;
         align-items: center;
+        flex-direction: column;
 }
 
 @media screen and (max-width: 480px) {
