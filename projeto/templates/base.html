@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Projeto Semestre{% endblock %}</title> {% load static%}
     <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+
+    {% comment %} Ícone de Menu da navbar {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
 </head>
 <body>
-    <header>
+
+        {% comment %}
         <img class="logo" src="{% static 'img/logo.png' %}" alt="">
         <div class="btnacesso">
             <a class="btn" href="{% url 'homepage'%}">Home</a>
@@ -20,7 +25,31 @@
                 <button type="submit" class="btnv">Sair</button>
             </form>
         </div>
-    </header>
+        {% endcomment %}
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars" ></i>
+            </label>
+
+
+            <div class="logo-container">
+                <img class="logo" src="{% static 'img/logo-removebg-preview.png' %}" alt="logo">
+            </div>
+            <ul>
+                <li><a href="{% url 'homepage'%}">Home</a></li>
+                <li><a href="{% url 'produto_list'%}">Produtos</a></li>
+                <li><a href="{% url 'categoria_list'%}">Categorias</a></li>
+                <li><a href="{% url 'movimentacao_list'%}">Movimentação</a></li>
+                <li><a href="{% url 'profile' %}">Perfil</a></li>
+                <li><form action="{% url "logout" %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btnv" id="btn-logout">Sair</button>
+                </form></li>
+            </ul>
+        </nav>
+    {% comment %} Espaço do fechamento header, lembrar de abrir la em cima se for por de volta{% endcomment %}
     <div class="container">
     {% block content %} {% endblock %}
     </div>

@@ -2,12 +2,216 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav {
+    background-color: rgb(31, 31, 31);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+    color: aliceblue;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+nav ul li form {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita dentro do <li> */
+    margin-left: auto;          /* Faz com que o form (e o botão) se alinhem à direita */
+}
+
+nav ul li form button {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: aliceblue;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+nav ul li form button:hover {
+    background-color: rgb(31, 31, 31);
+    color: aliceblue;
+    border: 2px solid rgb(31, 31, 31);
+}
+
+#btn-logout{
+    display: none;
+}
+
+.checkbtn {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Inicialmente, o ícone de hambúrguer é escondido */
+}
+
+#check {
+    display: none;
+}
+
+a.active, a:hover {
+    background: #270100;
+    border-radius: 7.5px;
+    transition: .5s;
+}
+
+label.logo {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+body {
+    color: rgb(230, 230, 230);
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 0.95rem; /* Fonte intermediária */
+    }
+
+    header, footer {
+        font-size: 0.9rem; /* Fonte intermediária no cabeçalho e rodapé */
+    }
+
+    .btnacesso {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container {
+        color: aliceblue;
+        gap: 2vh;
+        padding-top: 5vh;
+    }
+
+    table, thead, tbody {
+        width: 100%;
+        font-size: 0.8rem; /* Fonte intermediária na tabela */
+
+    }
+
+    thead tr{
+        font-weight: bold;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem; /* Títulos intermediários */
+    }
+
+    .btn, .btnv, .btna {
+        font-size: 0.9rem; /* Fonte intermediária nos botões */
+    }
+}
+
+thead th {
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block; /* Exibe o ícone de hambúrguer quando a tela for pequena */
+    }
+
+    nav ul {
+        display: none; /* Esconde o menu por padrão */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #0f0f0ff8;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #check:checked ~ ul {
+        display: block; /* Exibe o menu quando o checkbox estiver marcado */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover {
+        background: none;
+        color: #222222;
+    }
 }
 
 header, footer {
     width: 100vw;
     height: 10vh;
-    background-color: rgb(70, 71, 72);
+    background-color: rgb(31, 31, 31);
     display: flex;
     gap: 10vw;
     justify-content: space-evenly;
@@ -15,9 +219,8 @@ header, footer {
 
 .container {
     width: 100vw;
-    padding-top: 10vh;
-    min-height: 80vh;
-    background-color: rgb(161, 165, 167);
+    min-height: 80vh; /* Usa min-height em vez de height */
+    background-color: rgb(22, 22, 22);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,9 +235,12 @@ tr {
     border-bottom: 2px solid rgb(0, 0, 0);
     min-height: 6vh;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    gap: 10px;
     align-items: center;
     justify-content: space-between;
+    display: grid;
 }
 
 td, th {
@@ -65,7 +271,7 @@ td, th {
 
 .btnv {
     text-decoration: none;
-    background-color: rgba(210, 0, 0, 0.5);
+    background-color: rgb(116, 0, 0);
     color: aliceblue;
     padding: 2px;
     margin: 2px;
@@ -74,12 +280,12 @@ td, th {
 
 .btnv:hover {
     text-decoration: none;
-    background-color: rgb(210, 0, 0);
+    background-color: rgb(224, 0, 0);
     color: aliceblue;
     padding: 2px;
     margin: 2px;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid black;
 }
 
 form {
@@ -97,7 +303,7 @@ form > p {
 }
 
 .logo {
-    height: 55px;
+    height: 10vh;
 }
 
 .btnacesso {
@@ -109,7 +315,7 @@ form > p {
 
 .btna {
     text-decoration: none;
-    background-color: rgba(38, 50, 143, 0.7);
+    background-color: #270100;
     color: aliceblue;
     padding: 2px;
     margin: 2px;
@@ -118,102 +324,10 @@ form > p {
 
 .btna:hover {
     text-decoration: none;
-    background-color: rgb(33, 51, 186);
+    background-color: #270100;
     color: aliceblue;
     padding: 2px;
     margin: 2px;
     border-radius: 5px;
     border: 2px solid rgb(211, 210, 210);
-}
-
-@media screen and (max-width: 700px) {
-    body {
-        font-size: 0.9rem; /* Fonte padrão menor */
-    }
-
-    header, footer {
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: auto;
-        gap: 2vh;
-        font-size: 0.8rem; /* Fonte menor no cabeçalho e rodapé */
-    }
-    td{
-        min-width: none;
-        max-width: 3vw;
-        overflow: hidden;
-    }
-    .btnacao{
-        display: flex;
-        flex-direction: column;
-    }
-    .container {
-        gap: 3vh;
-        padding-top: 5vh;
-    }
-
-    table, thead, tbody {
-        width: 95%;
-        font-size: 0.75rem; /* Fonte menor na tabela */
-    }
-
-    h1, h2 {
-        font-size: 1.2rem; /* Títulos menores */
-    }
-
-    .btn, .btnv, .btna {
-        padding: 5px 10px;
-        margin: 5px 0;
-        font-size: 0.85rem; /* Fonte reduzida dos botões */
-    }
-
-    .logo {
-        width: 40vw;
-        height: auto;
-        margin-bottom: 2vh;
-    }
-
-    .table-container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    body {
-        font-size: 0.95rem; /* Fonte intermediária */
-    }
-
-    header, footer {
-        font-size: 0.9rem; /* Fonte intermediária no cabeçalho e rodapé */
-    }
-
-    .btnacesso {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .container {
-        gap: 2vh;
-        padding-top: 5vh;
-    }
-
-    table, thead, tbody {
-        width: 100%;
-        font-size: 0.8rem; /* Fonte intermediária na tabela */
-    }
-
-    form {
-        width: 90%;
-    }
-
-    h1, h2 {
-        font-size: 1.4rem; /* Títulos intermediários */
-    }
-
-    .btn, .btnv, .btna {
-        font-size: 0.9rem; /* Fonte intermediária nos botões */
-    }
 }
