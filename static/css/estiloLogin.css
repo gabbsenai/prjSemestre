@@ -9,7 +9,7 @@ body {
     grid-template-columns: 3fr 9fr; 
     grid-template-rows: 100vh; 
     grid-template-areas: "l c"; 
-    height: 100vh; 
+    height: 100vh;
 }
 .lateral {
     grid-area: l;
@@ -27,8 +27,8 @@ body {
 }
 .container {
     grid-area: c;
-    background-color: rgb(161, 165, 167);
-    color: rgb(0, 0, 0);
+    background-color: #161616;
+    color:rgb(230, 230, 230);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,7 @@ form {
 }
 form p {
     width: 100%;
-    color: rgb(0, 0, 0);
+    color:  rgb(230, 230, 230);
 }
 .btn{
     text-decoration: none;
@@ -76,11 +76,25 @@ form p {
     flex-direction: column;
     align-items: center;
     gap: 2vh;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(230, 230, 230);
+    color:  rgb(230, 230, 230);
+    border-radius: 25px;
 }
+
+#id_username, #id_password{
+    border-radius: 10px;
+    color: rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
+}
+
+
 @media screen and (max-width: 900px) {
     
     body{
         grid-template-areas: "c c";
+    }
+
+    container{
+        background-color: #161616;
     }
 }

@@ -10,7 +10,7 @@
 
 nav {
     background-color: rgb(31, 31, 31);
-    height: 80px;
+    height: 57px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -92,7 +92,7 @@ label.logo {
 
 body {
     color: rgb(230, 230, 230);
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(25, 25, 25);
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -105,6 +105,14 @@ table{
 
 }
 
+.tablecontainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .table-container {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
@@ -113,7 +121,19 @@ table{
     overflow-x: auto;
 }
 
+thead tr{
+    font-weight: bold;
+    min-width: 10vw;
+}
+
+
+
 @media (max-width: 952px) {
+
+    nav{
+        height: 42px;
+    }
+
     label.logo {
         font-size: 30px;
         padding-left: 50px;
@@ -121,6 +141,32 @@ table{
 
     nav ul li a {
         font-size: 16px;
+    }
+
+    #btn-act{
+        display: flex;
+    }
+
+    td, th{
+        min-width: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    tr{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #id-qnt-mov, #id-data-mov, #id-valor-mov{
+        padding-top: 3.5px;
+    }
+
+    checkbox{
+        display: none;
+        font-size: 12px;
     }
 }
 
@@ -152,6 +198,7 @@ table{
 
     thead tr{
         font-weight: bold;
+
     }
 
     form {
@@ -240,14 +287,12 @@ tr {
     gap: 10px;
     align-items: center;
     justify-content: space-between;
-    display: grid;
 }
 
 td, th {
-    min-width: 15vw;
+    min-width: 3vw;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 }
 
 .btn {
@@ -315,7 +360,7 @@ form > p {
 
 .btna {
     text-decoration: none;
-    background-color: #270100;
+    background-color: #1F1F1F;
     color: aliceblue;
     padding: 2px;
     margin: 2px;
@@ -324,7 +369,7 @@ form > p {
 
 .btna:hover {
     text-decoration: none;
-    background-color: #270100;
+    background-color: #252525;
     color: aliceblue;
     padding: 2px;
     margin: 2px;

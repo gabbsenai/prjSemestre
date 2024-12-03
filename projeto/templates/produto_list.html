@@ -13,7 +13,7 @@
                     <th>Preço</th>
                     <th>Categoria</th>
                     <th>Estado</th>
-                    <th>Ações</th>
+                    {% comment %} <th>Ações</th> {% endcomment %}
                 </tr>
             </thead>
             <tbody>
@@ -23,7 +23,7 @@
                     <td>R$ {{ produto.valor }}</td>
                     <td>{{ produto.categoria.nome }}</td>
                     <td>{{ produto.estado }}</td>
-                    <td>
+                    <td id="btn-act">
                         <a href="{% url 'produto_update' produto.pk %}" class="btna">Editar</a>
                         <a href="{% url 'produto_delete' produto.pk %}" class="btnv">Excluir</a>
                     </td>
